@@ -2,31 +2,31 @@
 preludeClarinet = {
   \clef treble
   % 小节 1
-  \key a \major \time 12/16 R1*3/4 |
+  \key a \major \time 12/16 \transpose c d { e8-.\pp r16 r8. e8-. r16 r8. | }
   % 小节 2
-  R1*3/4 |
+  \transpose c d { g8-. r16 r8. g8-. r16 r8. | }
   % 小节 3
-  R1*3/4 |
+  \transpose c d { e8-. r16 r8. e8-. r16 r8. | }
   % 小节 4
-  R1*3/4 |
+  \transpose c d { g8-. r16 r8. g8-. r16 r8. | }
   % 小节 5
-  R1*3/4 |
+  \transpose c d { a'4.( b'4.) | }
   % 小节 6
-  R1*3/4 |
+  \transpose c d { a'4.( b'4.) | }
   % 小节 7
-  R1*3/4 |
+  \transpose c d { e8-. r16 r8. b8-. r16 r8. | }
   % 小节 8
-  R1*3/4 |
+  \transpose c d { e8-. r16 r8. b8-. r16 r8. | }
   % 小节 9
-  R1*3/4 |
+  \transpose c d { e8-. r16 r8. d'8-. r16 r8. | }
   % 小节 10
-  R1*3/4 |
+  \transpose c d { \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) | }
   % 小节 11
-  R1*3/4 |
+  \transpose c d { b8-. r16 r8. b8-. r16 r8. | }
   % 小节 12
-  R1*3/4 |
+  \transpose c d { \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) | }
   % 小节 13
-  R1*3/4 |
+  \transpose c d { b8-. r16 r8. b8-. r16 r8. | }
   % 小节 14
   R1*3/4 |
   % 小节 15
@@ -44,19 +44,19 @@ preludeClarinet = {
   % 小节 21
   R1*3/4 |
   % 小节 22
-  R1*3/4 |
+  \transpose c d { \grace { e'32--( d' } e'4.\mp) fis'8( a' d'') | }
   % 小节 23
-  R1*3/4 |
+  \transpose c d { \grace { e'32--( d' } e'4.) \grace { fis'32--( e' } fis'4.) | }
   % 小节 24
   R1*3/4 |
   % 小节 25
   R1*3/4 |
   % 小节 26
-  R1*3/4 |
+  \transpose c d { \grace { fis''32->( e'' } fis''4.\f) \grace { fis''32->( e'' } fis''4.) | }
   % 小节 27
-  R1*3/4 |
+  \transpose c d { \grace { fis''32->( e'' } fis''4.\<) \grace { fis''32->( g'' } fis''4.) | }
   % 小节 28
-  R1*3/4 |
+  \transpose c d { \grace { fis''32->( a'' } fis''4.\ff) r4. | }
   % 小节 29
   R1*3/4 |
   % 小节 30

@@ -26,9 +26,9 @@ preludeOboe = {
   % 小节 12
   \grace { fis'32->( [ g'] } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( [ g'] } fis'16 [ e' fis'~ fis'8.]) |
   % 小节 13
-  fis'16( [ e' b cis'! e' a']) fis'( [ e' b cis' e' a']) |
+  fis'16( [ e' b cis'! e' a']) fis'( [ e' b cis' e' a'] |
   % 小节 14
-  R1*3/4 |
+  fis'16) r16 r16 r8. r4. |
   % 小节 15
   R1*3/4 |
   % 小节 16
@@ -48,15 +48,15 @@ preludeOboe = {
   % 小节 23
   R1*3/4 |
   % 小节 24
-  R1*3/4 |
+  \grace { b'32--( a' } b'4.\mf) cis''!8( e'' a'') |
   % 小节 25
-  R1*3/4 |
+  \grace { b'32--( a' } b'4.) \grace { cis''!32--( b' } cis''4.) |
   % 小节 26
-  R1*3/4 |
+  \grace { fis''32->( e'' } fis''4.\f) \grace { fis''32->( e'' } fis''4.) |
   % 小节 27
-  R1*3/4 |
+  \grace { fis''32->( e'' } fis''4.\<) \grace { fis''32->( g'' } fis''4.) |
   % 小节 28
-  R1*3/4 |
+  \grace { fis''32->( a'' } fis''4.\ff) r4. |
   % 小节 29
   R1*3/4 |
   % 小节 30

@@ -12,6 +12,11 @@ ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from midi_files import concatenate, read_midi, read_vlq, vlq
 
+# MIDI channel volume (CC 7): keep the piano behind the three wind parts.
+# This leaves the written dynamics and individual note velocities intact.
+WIND_MIDI_VOLUME = 120
+PIANO_MIDI_VOLUME = 45
+
 
 def instrument_tracks(source, target):
     """Combine the two piano staves into one MIDI track, retaining channels."""
@@ -32,9 +37,12 @@ def instrument_tracks(source, target):
     # Keep them stable so the combined file remains editable as four parts.
     for name, channel in {"flute": 0, "oboe": 1, "clarinet": 2, "upper": 3, "lower": 4}.items():
         events, end = by_name[name]
-        by_name[name] = ([(tick, bytes([(event[0] & 0xF0) | channel]) + event[1:]
-                           if 0x80 <= event[0] < 0xF0 else event)
-                          for tick, event in events], end)
+        events = [(tick, bytes([(event[0] & 0xF0) | channel]) + event[1:]
+                   if 0x80 <= event[0] < 0xF0 else event)
+                  for tick, event in events]
+        volume = PIANO_MIDI_VOLUME if name in {"upper", "lower"} else WIND_MIDI_VOLUME
+        events.insert(0, (0, bytes([0xB0 | channel, 7, volume])))
+        by_name[name] = (events, end)
     piano = [by_name["upper"], by_name["lower"]]
     piano_events = sorted(
         [event for part, _ in piano for event in part if event[1][:2] != b"\xff\x03"],

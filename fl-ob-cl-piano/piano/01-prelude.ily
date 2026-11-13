@@ -22,11 +22,11 @@ preludeVoiceOne = {
   % measure 9
   s2. |
   % measure 10
-  \stemUp dis'!16 r16 \stemUp dis'16~ \stemUp dis'8. \stemUp dis'16 r16 \stemUp dis'16~ \stemUp dis'8. |
+  s2. |
   % measure 11
   \stemUp dis'!16 r16 r8 r8 \stemUp dis'16 r16 r8 r8 |
   % measure 12
-  \stemUp dis'!16 r16 \stemUp dis'16~ \stemUp dis'8. \stemUp dis'16 r16 \stemUp dis'16~ \stemUp dis'8. |
+  s2. |
   % measure 13
   \stemUp dis'!16 r16 r8 r8 \stemUp dis'16 r16 r8 r8 |
   % measure 14
@@ -46,19 +46,19 @@ preludeVoiceOne = {
   % measure 21
   \stemUp a'16 [ \stemUp bes'!16 \stemUp g'16 \stemUp a'16 \stemUp bes'16 \stemUp c''16 ] \stemUp a'16 [ \stemUp g'16 \stemUp e'16 \stemUp d'16 \stemUp c'16 \stemUp d'16 \=1) ] |
   % measure 22
-  \grace { \stemUp e'32 _\=1( -- [ \stemUp d'32 ] } \stemUp e'4. \=1) ^\=1( \stemUp fis'!8 [ \stemUp a'8 \stemUp d''8 \=1) ] |
+  s2. |
   % measure 23
-  \grace { \stemUp e'32 _\=1( -- [ \stemUp d'32 ] } \stemUp e'4. \=1) \grace { \stemUp fis'32 _\=1( -- [ \stemUp e'32 ] } \stemUp fis'4. \=1) |
+  s2. |
   % measure 24
-  \grace { \stemUp b'32 _\=1( -- [ \stemUp a'32 ] } \stemDown b'4. \=1) ^\=1( \stemDown cis''!8 [ \stemDown e''8 \stemDown a''8 \=1) ] |
+  s2. |
   % measure 25
-  \grace { \stemUp b'32 _\=1( -- [ \stemUp a'32 ] } \stemDown b'4. \=1) \grace { \stemUp cis''!32 _\=1( -- [ \stemUp b'32 ] } \stemDown cis''4. \=1) |
+  s2. |
   % measure 26
-  \grace { \stemUp fis''32 _\=1( -> [ \stemUp e''32 ] } \stemDown fis''4. \=1) \grace { \stemUp fis''32 _\=1( -> [ \stemUp e''32 ] } \stemDown fis''4. \=1) |
+  s2. |
   % measure 27
-  \grace { \stemUp fis''32 _\=1( -> [ \stemUp e''32 ] } \stemDown fis''4. \=1) \grace { \stemUp fis''32 _\=1( -> [ \stemUp g''32 ] } \stemDown fis''4. \=1) |
+  s2. |
   % measure 28
-  \grace { \stemUp fis''32 _\=1( -> [ \stemUp a''32 ] } \stemDown fis''4. \=1) \change Staff = "lower" \stemUp fis''16 [ \change Staff = "upper" \stemDown g''16 \stemDown b''16 \stemDown d'''16 \stemDown b''16 \stemDown g''16 ] |
+  s4. \change Staff = "lower" \stemUp fis''16 [ \change Staff = "upper" \stemDown g''16 \stemDown b''16 \stemDown d'''16 \stemDown b''16 \stemDown g''16 ] |
   % measure 29
   \stemDown fis''16 [ \stemDown g''16 \stemDown e''16 \stemDown d''16 \stemDown e''16 \stemDown b'16 ] \stemUp b'16 [ \stemUp d''16 \stemUp a'16 \stemUp g'16 \stemUp e'16 \stemUp fis'16 ] |
   % measure 30
