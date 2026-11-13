@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the chamber full score and its three-instrument MIDI."""
+"""Build the chamber full score and its four-instrument MIDI."""
 from pathlib import Path
 import os
 import shutil
@@ -16,8 +16,8 @@ from midi_files import concatenate, read_midi, read_vlq, vlq
 def instrument_tracks(source, target):
     """Combine the two piano staves into one MIDI track, retaining channels."""
     division, tracks = read_midi(source)
-    if len(tracks) != 5:
-        raise ValueError(f"Expected conductor, flute, oboe and two piano staves: {source}")
+    if len(tracks) != 6:
+        raise ValueError(f"Expected conductor, flute, oboe, clarinet and two piano staves: {source}")
     def track_name(track):
         for _, event in track[0]:
             if event[:2] == b"\xff\x03":
@@ -26,11 +26,11 @@ def instrument_tracks(source, target):
         return ""
 
     by_name = {track_name(track).split(":", 1)[0]: track for track in tracks[1:]}
-    if set(by_name) != {"flute", "oboe", "upper", "lower"}:
+    if set(by_name) != {"flute", "oboe", "clarinet", "upper", "lower"}:
         raise ValueError(f"Unexpected MIDI instrument tracks in {source}: {list(by_name)}")
     # LilyPond may assign channels in a different order in each movement.
-    # Keep them stable so the combined file remains editable as three parts.
-    for name, channel in {"flute": 0, "oboe": 1, "upper": 2, "lower": 3}.items():
+    # Keep them stable so the combined file remains editable as four parts.
+    for name, channel in {"flute": 0, "oboe": 1, "clarinet": 2, "upper": 3, "lower": 4}.items():
         events, end = by_name[name]
         by_name[name] = ([(tick, bytes([(event[0] & 0xF0) | channel]) + event[1:]
                            if 0x80 <= event[0] < 0xF0 else event)
@@ -41,7 +41,7 @@ def instrument_tracks(source, target):
         key=lambda event: event[0],
     )
     piano_events.insert(0, (0, b"\xff\x03\x05Piano"))
-    combined = [tracks[0], by_name["flute"], by_name["oboe"],
+    combined = [tracks[0], by_name["flute"], by_name["oboe"], by_name["clarinet"],
                 (piano_events, max(end for _, end in piano))]
     data = b"MThd" + struct.pack(">IHHH", 6, 1, len(combined), division)
     for events, end in combined:
@@ -59,7 +59,7 @@ def main():
     lilypond = shutil.which("lilypond")
     if not lilypond:
         sys.exit("LilyPond is required (tested with 2.26.0).")
-    stage = ROOT / "tmp" / "fl-ob-piano"
+    stage = ROOT / "tmp" / "fl-ob-cl-piano"
     stage.mkdir(parents=True, exist_ok=True)
     output = HERE / "output"
     output.mkdir(exist_ok=True)

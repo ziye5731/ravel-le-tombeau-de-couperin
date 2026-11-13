@@ -1,5 +1,5 @@
-% 每小节休止保留独立位置，便于后续逐小节改编。
-rigaudonWindRests = {
+% 长笛：逐小节独立编辑。
+rigaudonFlute = {
   \clef treble
   % 小节 1
   \key c \major \time 2/4 R1*1/2 |
@@ -258,5 +258,3 @@ rigaudonWindRests = {
   % 小节 128
   R1*1/2 |
 }
-rigaudonFlute = { \rigaudonWindRests }
-rigaudonOboe = { \rigaudonWindRests }

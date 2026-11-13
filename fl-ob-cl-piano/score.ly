@@ -1,17 +1,29 @@
 \version "2.26.0"
 \include "common.ily"
 \include "piano/01-prelude.ily"
-\include "winds/01-prelude.ily"
+\include "flute/01-prelude.ily"
+\include "oboe/01-prelude.ily"
+\include "clarinet/01-prelude.ily"
 \include "piano/02-fugue.ily"
-\include "winds/02-fugue.ily"
+\include "flute/02-fugue.ily"
+\include "oboe/02-fugue.ily"
+\include "clarinet/02-fugue.ily"
 \include "piano/03-forlane.ily"
-\include "winds/03-forlane.ily"
+\include "flute/03-forlane.ily"
+\include "oboe/03-forlane.ily"
+\include "clarinet/03-forlane.ily"
 \include "piano/04-rigaudon.ily"
-\include "winds/04-rigaudon.ily"
+\include "flute/04-rigaudon.ily"
+\include "oboe/04-rigaudon.ily"
+\include "clarinet/04-rigaudon.ily"
 \include "piano/05-menuet.ily"
-\include "winds/05-menuet.ily"
+\include "flute/05-menuet.ily"
+\include "oboe/05-menuet.ily"
+\include "clarinet/05-menuet.ily"
 \include "piano/06-toccata.ily"
-\include "winds/06-toccata.ily"
+\include "flute/06-toccata.ily"
+\include "oboe/06-toccata.ily"
+\include "clarinet/06-toccata.ily"
 \book {
   \bookpart {
 \header {
@@ -26,6 +38,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \preludeFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \preludeOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \preludeClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \preludeTimingOne }
@@ -59,6 +72,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \fugueFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \fugueOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \fugueClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \fugueTimingOne }
@@ -89,6 +103,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \forlaneFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \forlaneOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \forlaneClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \forlaneTimingOne }
@@ -121,6 +136,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \rigaudonFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \rigaudonOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \rigaudonClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \rigaudonTimingOne }
@@ -152,6 +168,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \menuetFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \menuetOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \menuetClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \menuetTimingOne }
@@ -185,6 +202,7 @@
   \new StaffGroup <<
     \new Staff = "flute" \with { instrumentName = "Flûte" shortInstrumentName = "Fl." midiInstrument = "flute" } { \toccataFlute }
     \new Staff = "oboe" \with { instrumentName = "Hautbois" shortInstrumentName = "Htb." midiInstrument = "oboe" } { \toccataOboe }
+    \new Staff = "clarinet" \with { instrumentName = "Clarinette en Si♭" shortInstrumentName = "Cl. si♭" midiInstrument = "clarinet" } { \transposition bes \toccataClarinet }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." connectArpeggios = ##t } <<
     \new Staff = "upper" <<
       \new Voice { \toccataTimingOne }

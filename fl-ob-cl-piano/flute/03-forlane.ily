@@ -1,5 +1,5 @@
-% 每小节休止保留独立位置，便于后续逐小节改编。
-forlaneWindRests = {
+% 长笛：逐小节独立编辑。
+forlaneFlute = {
   \clef treble
   % 小节 1
   \key g \major \time 6/8 R1*3/4 |
@@ -328,5 +328,3 @@ forlaneWindRests = {
   % 小节 162
   R1*3/4 |
 }
-forlaneFlute = { \forlaneWindRests }
-forlaneOboe = { \forlaneWindRests }

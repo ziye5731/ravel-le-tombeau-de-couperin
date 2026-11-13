@@ -1,5 +1,5 @@
-% 每小节休止保留独立位置，便于后续逐小节改编。
-fugueWindRests = {
+% 长笛：逐小节独立编辑。
+fugueFlute = {
   \clef treble
   % 小节 1
   \key g \major \time 4/4 R1*1/1 |
@@ -124,5 +124,3 @@ fugueWindRests = {
   % 小节 61
   R1*1/1 |
 }
-fugueFlute = { \fugueWindRests }
-fugueOboe = { \fugueWindRests }

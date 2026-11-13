@@ -1,4 +1,4 @@
-% 钢琴部分来自 piano 工作稿；为三重奏总谱重新自动换行。
+% 钢琴部分来自 piano 工作稿；为室内乐总谱重新自动换行。
 % Working transcription. See README.md and EDITORIAL.md before use.
 
 preludeVoiceOne = {

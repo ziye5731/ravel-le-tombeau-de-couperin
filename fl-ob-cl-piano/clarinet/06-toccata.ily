@@ -1,8 +1,8 @@
-% 每小节休止保留独立位置，便于后续逐小节改编。
-toccataWindRests = {
+% B♭ 单簧管：谱面音高记谱；逐小节休止可直接改为记谱音高。
+toccataClarinet = {
   \clef treble
   % 小节 1
-  \key g \major \time 2/4 R1*1/2 |
+  \key a \major \time 2/4 R1*1/2 |
   % 小节 2
   R1*1/2 |
   % 小节 3
@@ -188,7 +188,7 @@ toccataWindRests = {
   % 小节 93
   R1*1/2 |
   % 小节 94
-  \key fis \major R1*1/2 |
+  \key aes \major R1*1/2 |
   % 小节 95
   R1*1/2 |
   % 小节 96
@@ -288,7 +288,7 @@ toccataWindRests = {
   % 小节 143
   R1*1/2 |
   % 小节 144
-  \key g \major R1*1/2 |
+  \key a \major R1*1/2 |
   % 小节 145
   R1*1/2 |
   % 小节 146
@@ -434,7 +434,7 @@ toccataWindRests = {
   % 小节 216
   R1*1/2 |
   % 小节 217
-  \key e \major R1*1/2 |
+  \key fis \major R1*1/2 |
   % 小节 218
   R1*1/2 |
   % 小节 219
@@ -504,5 +504,3 @@ toccataWindRests = {
   % 小节 251
   R1*1/2 |
 }
-toccataFlute = { \toccataWindRests }
-toccataOboe = { \toccataWindRests }

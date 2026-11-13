@@ -1,6 +1,6 @@
 # 拉威尔《库普兰之墓》室内乐改编工程
 
-当前内容为**钢琴原版六乐章的 LilyPond 工作稿**。尚未开始长笛、双簧管与钢琴的改编。
+当前包含钢琴原版六乐章的 LilyPond 工作稿，以及长笛、双簧管、B♭ 单簧管与钢琴的室内乐总谱框架；三个管乐声部暂为空。
 
 ## 查看乐谱
 
@@ -58,4 +58,4 @@ python3 scripts/render_pdf.py output/pdf/le-tombeau-de-couperin.pdf --pages 1 5
 
 `scripts/engrave.py` 是从存档 MusicXML 重建 `.ily` 的导入工具。**日常编辑之后只运行 `build.py`；重新运行 `engrave.py` 会覆盖乐章源码中的人工修改。**
 
-本项目使用 Git 管理版本；改编工作位于 `fl-ob-piano/`。
+本项目使用 Git 管理版本；改编工作位于 `fl-ob-cl-piano/`。
