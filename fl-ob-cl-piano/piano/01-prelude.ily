@@ -4,31 +4,31 @@
 preludeVoiceOne = {
   \set tieWaitForNote = ##t
   % measure 1
-  \stemUp a'16 _\=1( [ \stemUp g'16 \stemUp d'16 \stemUp e'16 \stemUp g'16 \stemUp b'16 \=1) ] \stemUp a'16 _\=1( [ \stemUp g'16 \stemUp d'16 \stemUp e'16 \stemUp g'16 \stemUp b'16 \=1) ] |
+  s2. |
   % measure 2
-  \grace { \stemUp a'32 _\=1( [ \stemUp b'32 ] } \stemUp a'16 \=1) _\=1( [ \stemUp g'16 \stemUp a'16~ \stemUp a'8. \=1) ] \grace { \stemUp a'32 _\=1( [ \stemUp b'32 ] } \stemUp a'16 \=1) _\=1( [ \stemUp g'16 \stemUp a'16~ \stemUp a'8. \=1) ] |
+  s2. |
   % measure 3
-  \stemUp a'16 _\=1( [ \stemUp g'16 \stemUp d'16 \stemUp e'16 \stemUp g'16 \stemUp b'16 \=1) ] \stemUp a'16 _\=1( [ \stemUp g'16 \stemUp d'16 \stemUp e'16 \stemUp g'16 \stemUp b'16 \=1) ] |
+  s2. |
   % measure 4
-  \grace { \stemUp a'32 _\=1( [ \stemUp b'32 ] } \stemUp a'16 \=1) _\=1( [ \stemUp g'16 \stemUp a'16~ \stemUp a'8. \=1) ] \grace { \stemUp a'32 _\=1( [ \stemUp b'32 ] } \stemUp a'16 \=1) _\=1( [ \stemUp g'16 \stemUp a'16~ \stemUp a'8. \=1) ] |
+  s2. |
   % measure 5
-  \stemDown c''16 ^\=1( [ \stemDown b'16 \stemDown c''16 \stemDown a'16 \stemDown b'16 \stemDown c''16 ] \stemDown d''16 [ \stemDown c''16 \stemDown d''16 \stemDown b'16 \stemDown d''16 \stemDown fis''16 ] |
+  s2. |
   % measure 6
-  \stemDown e''16 [ \stemDown d''16 \stemDown e''16 \stemDown c''16 \stemDown d''16 \stemDown e''16 ] \stemDown fis''16 [ \stemDown e''16 \stemDown fis''16 \stemDown d''16 \stemDown fis''16 \stemDown a''16 \=1) ] |
+  s2. |
   % measure 7
-  \stemDown fis''16 ^\=1( [ \stemDown g''16 \stemDown e''16 \stemDown d''16 \stemDown e''16 \stemDown b'16 ] \stemDown a'8 [ \stemDown b'8 \stemDown cis''!8 \=1) ] |
+  s2. |
   % measure 8
-  \stemDown fis''16 ^\=1( [ \stemDown g''16 \stemDown e''16 \stemDown d''16 \stemDown e''16 \stemDown b'16 ] \stemDown a'8 [ \stemDown b'8 \stemDown cis''!8 \=1) ] |
+  s2. |
   % measure 9
-  \stemDown fis''16 ^\=1( [ \stemDown g''16 \stemDown e''16 \stemDown d''16 \stemDown e''16 \stemDown b'16 ] \stemUp b'16 [ \stemUp d''16 \stemUp a'16 \stemUp a'16 \stemUp b'16 \stemUp e'16 \=1) ] |
+  s2. |
   % measure 10
-  \grace { \stemUp <fis' dis'!>32 ^\=1( [ \stemUp g'32 ] } \stemUp <dis'! fis'>16 \=1) _\=1( [ \stemUp cis'!16 \stemUp <dis'~ fis'~>16 \stemUp <dis' fis'>8. \=1) ] \grace { \stemUp <fis' dis'>32 ^\=1( [ \stemUp g'32 ] } \stemUp <dis' fis'>16 \=1) _\=1( [ \stemUp cis'16 \stemUp <dis'~ fis'~>16 \stemUp <dis' fis'>8. \=1) ] |
+  \stemUp dis'!16 r16 \stemUp dis'16~ \stemUp dis'8. \stemUp dis'16 r16 \stemUp dis'16~ \stemUp dis'8. |
   % measure 11
-  \stemUp <dis'! fis'>16 _\=1( [ \stemUp e'16 \stemUp b16 \stemUp cis'!16 \stemUp e'16 \stemUp a'16 \=1) ] \stemUp <dis' fis'>16 _\=1( [ \stemUp e'16 \stemUp b16 \stemUp cis'16 \stemUp e'16 \stemUp a'16 \=1) ] |
+  \stemUp dis'!16 r16 r8 r8 \stemUp dis'16 r16 r8 r8 |
   % measure 12
-  \grace { \stemUp <fis' dis'!>32 ^\=1( [ \stemUp g'32 ] } \stemUp <dis'! fis'>16 \=1) _\=1( [ \stemUp cis'!16 \stemUp <dis'~ fis'~>16 \stemUp <dis' fis'>8. \=1) ] \grace { \stemUp <fis' dis'>32 ^\=1( [ \stemUp g'32 ] } \stemUp <dis' fis'>16 \=1) _\=1( [ \stemUp cis'16 \stemUp <dis'~ fis'~>16 \stemUp <dis' fis'>8. \=1) ] |
+  \stemUp dis'!16 r16 \stemUp dis'16~ \stemUp dis'8. \stemUp dis'16 r16 \stemUp dis'16~ \stemUp dis'8. |
   % measure 13
-  \stemUp <dis'! fis'>16 _\=1( [ \stemUp e'16 \stemUp b16 \stemUp cis'!16 \stemUp e'16 \stemUp a'16 \=1) ] \stemUp <dis' fis'>16 _\=1( [ \stemUp e'16 \stemUp b16 \stemUp cis'16 \stemUp e'16 \stemUp a'16 \=1) ] |
+  \stemUp dis'!16 r16 r8 r8 \stemUp dis'16 r16 r8 r8 |
   % measure 14
   \stemUp fis'16 ^\=1( [ \stemUp e'16 \stemUp fis'16 r16 \stemUp e'16 \stemUp fis'16 ] \stemUp cis''!16 [ \stemUp fis'16 \stemUp cis''16 \stemUp b'16 \stemUp eis'!16 \stemUp b'16 \=1) ] |
   % measure 15

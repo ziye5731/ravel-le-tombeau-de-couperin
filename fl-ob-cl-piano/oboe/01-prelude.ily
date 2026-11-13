@@ -2,31 +2,31 @@
 preludeOboe = {
   \clef treble
   % 小节 1
-  \key g \major \time 12/16 R1*3/4 |
+  \key g \major \time 12/16 a'16(\pp [ g' d' e' g' b']) a'( [ g' d' e' g' b']) |
   % 小节 2
-  R1*3/4 |
+  \grace { a'32->( [ b'] } a'16 [ g' a'~ a'8.]) \grace { a'32->( [ b'] } a'16 [ g' a'~ a'8.]) |
   % 小节 3
-  R1*3/4 |
+  a'16( [ g' d' e' g' b']) a'( [ g' d' e' g' b']) |
   % 小节 4
-  R1*3/4 |
+  \grace { a'32->( [ b'] } a'16 [ g' a'~ a'8.]) \grace { a'32->( [ b'] } a'16 [ g' a'~ a'8.]) |
   % 小节 5
-  R1*3/4 |
+  c''16(\pp\< [ b' c'' a' b' c'']) d''( [ c'' d'' b' d'' fis'']) |
   % 小节 6
-  R1*3/4 |
+  e''16( [ d'' e'' c'' d'' e'']) fis''( [ e'' fis'' d'' fis'' a'']) |
   % 小节 7
-  R1*3/4 |
+  fis''16(\mp\> [ g'') e'' d''( e'') b'] a'8(\< [ b' cis''!]) |
   % 小节 8
-  R1*3/4 |
+  fis''16(\> [ g'') e'' d''( e'') b'] a'8(\< [ b' cis''!]) |
   % 小节 9
-  R1*3/4 |
+  fis''16(\> [ g'') e'' d''( e'') b'] b'( [ d'') a' a'( b') e'] |
   % 小节 10
-  R1*3/4 |
+  \grace { fis'32->( [ g'] } fis'16\p [ e' fis'~ fis'8.]) \grace { fis'32->( [ g'] } fis'16 [ e' fis'~ fis'8.]) |
   % 小节 11
-  R1*3/4 |
+  fis'16( [ e' b cis'! e' a']) fis'( [ e' b cis' e' a']) |
   % 小节 12
-  R1*3/4 |
+  \grace { fis'32->( [ g'] } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( [ g'] } fis'16 [ e' fis'~ fis'8.]) |
   % 小节 13
-  R1*3/4 |
+  fis'16( [ e' b cis'! e' a']) fis'( [ e' b cis' e' a']) |
   % 小节 14
   R1*3/4 |
   % 小节 15
