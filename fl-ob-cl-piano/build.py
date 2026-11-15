@@ -85,10 +85,22 @@ def main():
         processed = stage / f"movement-{i + 1}.midi"
         instrument_tracks(original, processed)
         movements.append(processed)
+    # Use the project-local environment for python-ly when available.
+    musicxml_python = HERE / ".venv" / "bin" / "python"
+    musicxml_stage = stage / "score.musicxml"
+    subprocess.run(
+        [str(musicxml_python if musicxml_python.exists() else sys.executable),
+         str(HERE / "export_musicxml.py"), "--output", str(musicxml_stage)],
+        cwd=HERE, check=True,
+    )
+    subprocess.run([sys.executable, str(HERE / "validate_musicxml.py"), str(musicxml_stage)],
+                   cwd=HERE, check=True)
     concatenate(movements, output / "score.midi")
     shutil.copyfile(stage / "suite.pdf", output / "score.pdf")
+    shutil.copyfile(musicxml_stage, output / "score.musicxml")
     print(f"Full score: {output / 'score.pdf'}")
     print(f"MIDI: {output / 'score.midi'}")
+    print(f"MusicXML: {output / 'score.musicxml'}")
 
 
 if __name__ == "__main__":

@@ -20,11 +20,11 @@ preludeClarinet = {
   % 小节 9
   \transpose c d { e8-. r16 r8. d'8-. r16 r8. | }
   % 小节 10
-  \transpose c d { \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) | }
+  \transpose c d { \grace { fis'32->( [g'] } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( [g'] } fis'16 [ e' fis'~ fis'8.]) | }
   % 小节 11
   \transpose c d { b8-. r16 r8. b8-. r16 r8. | }
   % 小节 12
-  \transpose c d { \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( g' } fis'16 [ e' fis'~ fis'8.]) | }
+  \transpose c d { \grace { fis'32->( [ g']} fis'16 [ e' fis'~ fis'8.]) \grace { fis'32->( [g'] } fis'16 [ e' fis'~ fis'8.]) | }
   % 小节 13
   \transpose c d { b8-. r16 r8. b8-. r16 r8. | }
   % 小节 14

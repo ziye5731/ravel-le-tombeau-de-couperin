@@ -7,13 +7,21 @@
 - `clarinet/*.ily` 按乐章保存 B♭ 单簧管声部，使用**记谱音高**：写出的 C 实际发声 B♭。调号已比实际音高高大二度；Toccata 的 F♯ 大调段以 A♭ 大调（G♯ 大调的等音）记谱。
 - `piano/*.ily` 是钢琴稿的独立副本，除已改编的小节外，音符及标记沿用原工作稿；为适应总谱移除了钢琴独奏谱的强制换行。
 - `output/score.midi` 包含长笛、双簧管、单簧管和钢琴四个乐器轨，以及 MIDI 所需的速度轨。木管轨包含已改编的小节；钢琴的左右手共用一个轨道。MIDI 的声道音量将三个木管设为 120、钢琴设为 45（满值 127）；不改动谱面力度和音符力度。
+- `output/score.musicxml` 是六乐章完整总谱，包含三个木管声部和双谱表钢琴声部，单簧管使用 B♭ 移调记谱。
 
-需要 LilyPond（以 2.26.0 验证）和 Python 3。在仓库根目录运行：
+需要 LilyPond（以 2.26.0 验证）和 Python 3。首次使用时，在仓库根目录安装 MusicXML 导出依赖：
+
+```sh
+python3 -m venv fl-ob-cl-piano/.venv
+fl-ob-cl-piano/.venv/bin/pip install -r fl-ob-cl-piano/requirements-musicxml.txt
+```
+
+然后运行：
 
 ```sh
 python3 fl-ob-cl-piano/build.py
 ```
 
-此命令只生成总谱和全曲 MIDI。钢琴声部继承原稿尚未逐音精校的限制，详见 `../EDITORIAL.md`；MIDI 的印刷反复线尚未展开。管弦乐原谱注明小音符应在拍上演奏；当前 LilyPond 生成的 MIDI 将装饰音放在主音前，试听时请留意。
+此命令会同时更新总谱 PDF、全曲 MIDI 和完整 MusicXML，并自动核对 MusicXML 和 MIDI 的音高及起音位置。MusicXML 从 LilyPond 编译后的声部结构生成，不依赖旧的钢琴 MusicXML；不同记谱软件中的排版及个别记号显示可能有所差异，演奏时请以 PDF 总谱为准。
 
-用户偏好：后续每次修改后，除总谱和较低钢琴音量的 MIDI 外，还需输出与当前总谱一致的 MusicXML。当前 `output/prelude-22-29.musicxml` 仅含《前奏曲》22–29 小节的节选，主要音符和时值已与 MIDI 核对，显示格式和表情记号可能与 LilyPond 总谱有差异。可以运行 `python3 fl-ob-cl-piano/export_musicxml_excerpt.py` 重建此节选；当这些小节的源码改变时，脚本会停止以防导出旧内容。完整总谱的 MusicXML 导出尚未实现。
+钢琴声部继承原稿尚未逐音精校的限制，详见 `../EDITORIAL.md`；MIDI 的印刷反复线尚未展开。管弦乐原谱注明小音符应在拍上演奏；当前 LilyPond 生成的 MIDI 将装饰音放在主音前，试听时请留意。原有 `output/prelude-22-29.musicxml` 仅是较早生成的节选，完整总谱请使用 `score.musicxml`。
